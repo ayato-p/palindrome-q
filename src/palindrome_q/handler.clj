@@ -1,11 +1,15 @@
 (ns palindrome-q.handler
   (:require [compojure.core :refer :all]
             [compojure.route :as route]
-            [ring.middleware.defaults :refer [wrap-defaults site-defaults]]))
+            [palindrome-q.routes [home-route :refer [home-routes]]]
+            [ring.middleware.defaults :refer [site-defaults
+                                              wrap-defaults]]))
 
 (defroutes app-routes
-  (GET "/" [] "Hello World!")
   (route/not-found "Not Found"))
 
 (def app
-  (wrap-defaults app-routes site-defaults))
+  (wrap-defaults
+   (routes home-routes
+           app-routes)
+   site-defaults))
