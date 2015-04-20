@@ -1,3 +1,4 @@
+
 (defproject palindrome-q "0.1.0-SNAPSHOT"
   :license {:name "MIT License"
             :url "http://opensource.org/licenses/MIT"
@@ -11,7 +12,8 @@
                  [compojure "1.3.3"]
                  [ring/ring-defaults "0.1.4"]
                  [enlive "1.1.5"]
-                 [prone "0.8.1"]]
+                 [prone "0.8.1"]
+                 [org.clojars.ayato_p/cljlc "0.1.0-SNAPSHOT"]]
   :plugins [[lein-ring "0.9.3"]
             [lein-sass "0.3.0"]]
   :ring {:handler palindrome-q.handler/app}

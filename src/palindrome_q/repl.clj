@@ -21,3 +21,7 @@
 (defn stop-server []
   (web/stop @server)
   (reset! server nil))
+
+(defn restart-server [& port]
+  (do (stop-server)
+      (apply start-server port)))
