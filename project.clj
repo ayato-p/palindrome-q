@@ -15,14 +15,20 @@
                  [prone "0.8.1"]
                  [org.clojars.ayato_p/cljlc "0.1.0-SNAPSHOT"]]
   :plugins [[lein-ring "0.9.3"]
-            [lein-sass "0.3.0"]]
+            [lein-haml-sass "0.2.7-SNAPSHOT"]
+            ;; [lein-sass "0.3.0"]
+            ]
   :ring {:handler palindrome-q.handler/app}
-  :sass {:src "resources/sass"
-         :output-directory "resources/public/css"}
-  :hooks [leiningen.sass]
+  :scss {:src "resources/sass"
+         :output-directory "resources/public/css"
+         :output-extension "css"}
+  :hooks [leiningen.scss]
   :profiles
   {:dev
    {:dependencies [[javax.servlet/servlet-api "2.5"]
                    [ring-mock "0.1.5"]
                    [ring/ring-devel "1.3.2"]]
-    :ring {:stacktrace-middleware prone.middleware/wrap-exceptions}}})
+    :ring {:stacktrace-middleware prone.middleware/wrap-exceptions}}
+
+   :production
+   {}})
