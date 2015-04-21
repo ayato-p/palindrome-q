@@ -9,7 +9,7 @@
 
 (defn get-handler []
   (-> #'app
-      (wrap-reload "resources")
+      (wrap-reload)
       (wrap-file "resources")
       (wrap-file-info)))
 
