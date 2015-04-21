@@ -1,1 +1,1 @@
-web: java $JVM_OPTS -jar target/palindrome-q.jar host 0.0.0.0 port $PORT
+web: java $JVM_OPTS -jar target/palindrome_q.jar host 0.0.0.0 port $PORT

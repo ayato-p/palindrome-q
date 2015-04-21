@@ -1,7 +1,7 @@
-(ns palindrome-q.handler-test
+(ns palindrome_q.handler-test
   (:require [clojure.test :refer :all]
             [ring.mock.request :as mock]
-            [palindrome-q.handler :refer :all]))
+            [palindrome_q.handler :refer :all]))
 
 (deftest test-app
   (testing "main route"

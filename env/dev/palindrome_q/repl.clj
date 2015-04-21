@@ -1,6 +1,6 @@
-(ns palindrome-q.repl
+(ns palindrome_q.repl
   (:require [immutant.web :as web]
-            [palindrome-q.handler :refer [app]]
+            [palindrome_q.handler :refer [app]]
             [ring.middleware.file-info :refer [wrap-file-info]]
             [ring.middleware.reload :refer [wrap-reload]]
             [ring.middleware.file :refer [wrap-file]]))

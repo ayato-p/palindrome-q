@@ -1,8 +1,8 @@
-(ns palindrome-q.handler
+(ns palindrome_q.handler
   (:require [compojure.core :refer :all]
             [compojure.route :as route]
             [immutant.web :as web]
-            [palindrome-q.routes [home-route :refer [home-routes]]]
+            [palindrome_q.routes [home-route :refer [home-routes]]]
             [ring.middleware.defaults :refer [site-defaults
                                               wrap-defaults]])
   (:gen-class))

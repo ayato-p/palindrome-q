@@ -1,4 +1,4 @@
-(ns palindrome-q.routes.home-route
+(ns palindrome_q.routes.home-route
   (:require [cljlc.core :refer [palindrome?]]
             [clojure.string :as str]
             [compojure.core :refer :all]
@@ -21,4 +21,4 @@
 
 (defroutes home-routes
   (GET "/" [] (home-page))
-  (POST "/check" [words] (palindrome? words)))
+  (POST "/check" [words] (str (palindrome? words))))
